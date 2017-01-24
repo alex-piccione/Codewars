@@ -10,17 +10,19 @@ namespace Codewars.WeAreTheRobots
         {
             int automatik = 0;
             int mechanik = 0;
-
-            string regex = CreateRegex();            
+                        
+            Regex automatikRegex = new Regex("automatik", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+            Regex mechanikRegex = new Regex("mechanik", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+            Regex robotRegex = CreateRobotRegex();
 
             foreach (string phrase in a)
             {
-                bool isAutomatik = Regex.IsMatch(phrase, "automatik", RegexOptions.IgnoreCase);
-                bool isMechanik = !isAutomatik && Regex.IsMatch(phrase, "mechanik", RegexOptions.IgnoreCase);
+                bool isAutomatik = automatikRegex.IsMatch(phrase);
+                bool isMechanik = !isAutomatik && mechanikRegex.IsMatch(phrase);
 
                 if (isAutomatik || isMechanik)
                 {               
-                    int robots = CountRobots(phrase, regex);
+                    int robots = robotRegex.Matches(phrase).Count;
 
                     if (isAutomatik)
                         automatik += robots;
@@ -34,13 +36,8 @@ namespace Codewars.WeAreTheRobots
                 $"{mechanik} robots dancing mechanik"
             };
         }
-        private static int CountRobots(string phrase, string regex)
-        {            
-            var matches = Regex.Matches(phrase, regex/*, RegexOptions.Compiled*/);
-            return matches.Count;
-        }
 
-        private static string CreateRegex()
+        private static Regex CreateRobotRegex()
         {
             // the robot has this shape: {leg}{body}{eye}{body}{eye}{body}{leg}
             // eye: it is a "0"
@@ -48,8 +45,7 @@ namespace Codewars.WeAreTheRobots
             // leg: it can be one of this: abcdefghijklmnopqrstuvwxyz
             string leg = @"[\w]";
             string body = @"[^\w\s]{2}";
-            string regex = $"{leg}{body}0{body}0{body}{leg}";
-            return regex;
+            return new Regex($"{leg}{body}0{body}0{body}{leg}", RegexOptions.Compiled);
         }
     }
 
