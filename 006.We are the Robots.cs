@@ -40,7 +40,7 @@ namespace Codewars.WeAreTheRobots
             // body: it is composed by 2 occurence of one of this: |};&#[]/><()*
             // leg: it can be one of this: abcdefghijklmnopqrstuvwxyz
             string leg = @"[\w]";
-            string body = @"[^\w]{2}";
+            string body = @"[^\w\s]{2}";
             string regex = $"{leg}{body}0{body}0{body}{leg}";
             return regex;
         }
@@ -102,7 +102,8 @@ namespace Codewars.WeAreTheRobots
         [Test]
         public void BasicTest8()
         {
-            String[] a = {"We're charging our battery","And now we're full of energy","We are the robots","We're functioning automatik",
+            String[] a = {
+                "We're charging our battery","And now we're full of energy","We are the robots","We're functioning automatik",
                        "And we are dancing mechanik","We are the robotororo robots","Ja tvoi sluga","Ja tvoi Rabotnik robotnik",
                        "We are programmed just to do","anything you want us to","we are the robots","We're functioning Automatic",
                        "and we are dancing Mechanic","we are the robots","Ja tvoi sluga","Ja tvoi Rabotnik robotnik",
