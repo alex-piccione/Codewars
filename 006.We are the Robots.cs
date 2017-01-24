@@ -40,9 +40,9 @@ namespace Codewars.WeAreTheRobots
 
         private static string CreateRegex()
         {
-            // the robot have this form: {leg}{body}{eye}{body}{eye}{body}{leg}
+            // the robot has this shape: {leg}{body}{eye}{body}{eye}{body}{leg}
             // eye: it is a "0"
-            // body: it is composed by 2 occurence of one of this: |};&#[]/><()*
+            // body: it is composed by 2 occurence of one of these: |};&#[]/><()*
             // leg: it can be one of this: abcdefghijklmnopqrstuvwxyz
             string leg = @"[\w]";
             string body = @"[^\w\s]{2}";
