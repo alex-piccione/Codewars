@@ -27,7 +27,7 @@ namespace Codewars.WeAreTheRobots
         }
         private static int CountRobots(string phrase)
         {
-            var matches = Regex.Matches(phrase, "d\\[\\(0\\)\\(0\\)\\]b");
+            var matches = Regex.Matches(phrase, "[\\w]\\[\\(0\\)\\(0\\)\\][\\w]", RegexOptions.IgnoreCase);
             return matches.Count;
         }
     }
