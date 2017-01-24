@@ -16,9 +16,9 @@ namespace Codewars.WeAreTheRobots
             foreach (string phrase in a)
             {
                 int robots = CountRobots(phrase, regex);
-                if (phrase.Contains("automatik"))
+                if (Regex.IsMatch(phrase, "automatik", RegexOptions.IgnoreCase))
                     automatik += robots;
-                else if(phrase.Contains("mechanik"))
+                else if(Regex.IsMatch(phrase, "mechanik", RegexOptions.IgnoreCase))
                     mechanik += robots;
             }
 
@@ -40,7 +40,7 @@ namespace Codewars.WeAreTheRobots
             // body: it is composed by 2 occurence of one of this: |};&#[]/><()*
             // leg: it can be one of this: abcdefghijklmnopqrstuvwxyz
             string leg = @"[\w]";
-            string body = @"[\[\]()]{2}";
+            string body = @"[^\w]{2}";
             string regex = $"{leg}{body}0{body}0{body}{leg}";
             return regex;
         }
