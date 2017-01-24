@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace Codewars.WeAreTheRobots
 {
-    class Kata
+    public class Kata
     {
         public static String[] CountRobots(String[] a)
         {
