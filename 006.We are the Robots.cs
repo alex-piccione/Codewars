@@ -15,11 +15,16 @@ namespace Codewars.WeAreTheRobots
 
             foreach (string phrase in a)
             {
-                int robots = CountRobots(phrase, regex);
-                if (Regex.IsMatch(phrase, "automatik", RegexOptions.IgnoreCase))
-                    automatik += robots;
-                else if(Regex.IsMatch(phrase, "mechanik", RegexOptions.IgnoreCase))
-                    mechanik += robots;
+                var matches = Regex.Matches(phrase, "(automatik)(mechanik)", RegexOptions.IgnoreCase);
+                if (matches.Count > 0)
+                {
+                    int robots = CountRobots(phrase, regex);
+
+                    if (matches[0].Success)
+                        automatik += robots;
+                    else
+                        mechanik += robots;
+                }               
             }
 
             return new string[] {
@@ -29,7 +34,7 @@ namespace Codewars.WeAreTheRobots
         }
         private static int CountRobots(string phrase, string regex)
         {            
-            var matches = Regex.Matches(phrase, regex, RegexOptions.Compiled);
+            var matches = Regex.Matches(phrase, regex/*, RegexOptions.Compiled*/);
             return matches.Count;
         }
 
