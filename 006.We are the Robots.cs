@@ -18,7 +18,7 @@ namespace Codewars.WeAreTheRobots
                 int robots = CountRobots(phrase, regex);
                 if (phrase.Contains("automatik"))
                     automatik += robots;
-                else
+                else if(phrase.Contains("mechanik"))
                     mechanik += robots;
             }
 
@@ -35,10 +35,12 @@ namespace Codewars.WeAreTheRobots
 
         private static string CreateRegex()
         {
-            // legs can be one of abcdefghijklmnopqrstuvwxyz, captured by \w
-            // body can be one of this (2 occurrences): |};&#[]/><()*, captured by [*\*^\w]{2}
+            // the robot have this form: {leg}{body}{eye}{body}{eye}{body}{leg}
+            // eye: it is a "0"
+            // body: it is composed by 2 occurence of one of this: |};&#[]/><()*
+            // leg: it can be one of this: abcdefghijklmnopqrstuvwxyz
             string leg = @"[\w]";
-            string body = @"[\[\]()]{2}"; // "[*\\*^\\w]{2}";
+            string body = @"[\[\]()]{2}";
             string regex = $"{leg}{body}0{body}0{body}{leg}";
             return regex;
         }
