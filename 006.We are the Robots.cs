@@ -29,7 +29,7 @@ namespace Codewars.WeAreTheRobots
         }
         private static int CountRobots(string phrase, string regex)
         {            
-            var matches = Regex.Matches(phrase, regex);
+            var matches = Regex.Matches(phrase, regex, RegexOptions.Compiled);
             return matches.Count;
         }
 
