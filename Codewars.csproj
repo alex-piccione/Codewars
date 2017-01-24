@@ -48,6 +48,7 @@
     <Compile Include="002.Disemvowel.cs" />
     <Compile Include="003.Morse Code Decoder.cs" />
     <Compile Include="005.Find the next perfect square.cs" />
+    <Compile Include="006.We are the Robots.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
