@@ -7,12 +7,14 @@ namespace Codewars.Factorial
     {
         public static int Factorial(int n)
         {
-            return 0;
+            if (n < 0 || n > 12) throw new ArgumentOutOfRangeException("The given number must be in the range [0..12]");
+            return n == 0 ? 1 :
+                n * Factorial(n - 1);
         }
     }
     
 
-    [TestFixture, Category("Kata 004 - Factorial")]
+    [TestFixture, Category("Kata 004: Factorial")]
     public class FactorialTests
     {
         [Test]
@@ -37,6 +39,19 @@ namespace Codewars.Factorial
         public void FactorialOf3ShouldBe6()
         {
             Assert.AreEqual(6, Kata.Factorial(3));
+        }
+
+        [Test]
+        public void FactorialOfNegativeShouldRaiseAnException()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>( () => Kata.Factorial(-1));
+        }
+
+		
+        [Test]
+        public void FactorialOfNumberAbove12ShouldRaiseAnException()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => Kata.Factorial(13));
         }
     }
 }
