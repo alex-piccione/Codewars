@@ -7,10 +7,9 @@ namespace Codewars.FindTheNextPErfectSquare
     {
         public static long FindNextSquare(long num)
         {
-            // your code here
             double sqrtOfNum = Math.Sqrt(num);
-            return sqrtOfNum % 1 != 0 ?  // not a square 
-                -1 : 0;
+            return sqrtOfNum % 1 != 0 ? -1  // not a square 
+                : (long)Math.Pow(sqrtOfNum+1, 2);
         }
     }
     
