@@ -10,10 +10,23 @@ namespace Codewars.WeAreTheRobots
             int automatik = 0;
             int mechanik = 0;
 
+            foreach (string phrase in a)
+            {
+                int robots = CountRobots(phrase);
+                if (phrase.Contains("automatik"))
+                    automatik += robots;
+                else
+                    mechanik += robots;
+            }
+
             return new string[] {
                 $"{automatik} robots functioning automatik",
                 $"{mechanik} robots dancing mechanik"
             };
+        }
+        private static int CountRobots(string phrase)
+        {
+            return 0;
         }
     }
 
