@@ -21,6 +21,7 @@ namespace Codewars.Factorial
         [TestCase(1, ExpectedResult = 1)]
         [TestCase(2, ExpectedResult = 2)]
         [TestCase(3, ExpectedResult = 6)]
+        [TestCase(12, ExpectedResult = 479001600)]
         public int FactorialShouldReturnTheRightValue(int number)
         {
             return Kata.Factorial(number);
