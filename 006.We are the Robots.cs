@@ -7,7 +7,13 @@ namespace Codewars.WeAreTheRobots
     {
         public static String[] CountRobots(String[] a)
         {
-            throw new NotImplementedException();
+            int automatik = 0;
+            int mechanik = 0;
+
+            return new string[] {
+                $"{automatik} robots functioning automatik",
+                $"{mechanik} robots dancing mechanik"
+            };
         }
     }
 
