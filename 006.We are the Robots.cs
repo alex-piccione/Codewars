@@ -11,16 +11,18 @@ namespace Codewars.WeAreTheRobots
             int automatik = 0;
             int mechanik = 0;
 
-            string regex = CreateRegex();
+            string regex = CreateRegex();            
 
             foreach (string phrase in a)
             {
-                var matches = Regex.Matches(phrase, "(automatik)(mechanik)", RegexOptions.IgnoreCase);
-                if (matches.Count > 0)
-                {
+                bool isAutomatik = Regex.IsMatch(phrase, "automatik", RegexOptions.IgnoreCase);
+                bool isMechanik = !isAutomatik && Regex.IsMatch(phrase, "mechanik", RegexOptions.IgnoreCase);
+
+                if (isAutomatik || isMechanik)
+                {               
                     int robots = CountRobots(phrase, regex);
 
-                    if (matches[0].Success)
+                    if (isAutomatik)
                         automatik += robots;
                     else
                         mechanik += robots;
