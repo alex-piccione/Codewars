@@ -11,9 +11,11 @@ namespace Codewars.WeAreTheRobots
             int automatik = 0;
             int mechanik = 0;
 
+            string regex = CreateRegex();
+
             foreach (string phrase in a)
             {
-                int robots = CountRobots(phrase);
+                int robots = CountRobots(phrase, regex);
                 if (phrase.Contains("automatik"))
                     automatik += robots;
                 else
@@ -25,10 +27,20 @@ namespace Codewars.WeAreTheRobots
                 $"{mechanik} robots dancing mechanik"
             };
         }
-        private static int CountRobots(string phrase)
-        {
-            var matches = Regex.Matches(phrase, "[\\w]\\[\\(0\\)\\(0\\)\\][\\w]", RegexOptions.IgnoreCase);
+        private static int CountRobots(string phrase, string regex)
+        {            
+            var matches = Regex.Matches(phrase, regex);
             return matches.Count;
+        }
+
+        private static string CreateRegex()
+        {
+            // legs can be one of abcdefghijklmnopqrstuvwxyz, captured by \w
+            // body can be one of this (2 occurrences): |};&#[]/><()*, captured by [*\*^\w]{2}
+            string leg = @"[\w]";
+            string body = @"[\[\]()]{2}"; // "[*\\*^\\w]{2}";
+            string regex = $"{leg}{body}0{body}0{body}{leg}";
+            return regex;
         }
     }
 
