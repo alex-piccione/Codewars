@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using System.Text.RegularExpressions;
 
 namespace Codewars.WeAreTheRobots
 {
@@ -26,7 +27,8 @@ namespace Codewars.WeAreTheRobots
         }
         private static int CountRobots(string phrase)
         {
-            return 0;
+            var matches = Regex.Matches(phrase, "d\\[\\(0\\)\\(0\\)\\]b");
+            return matches.Count;
         }
     }
 
