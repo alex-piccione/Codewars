@@ -7,13 +7,13 @@ namespace Codewars.WeAreTheRobots
     public class Kata
     {
         public static String[] CountRobots(String[] a)
-        {
-            int automatik = 0;
-            int mechanik = 0;
-                        
+        {                       
             Regex automatikRegex = new Regex("automatik", RegexOptions.IgnoreCase | RegexOptions.Compiled);
             Regex mechanikRegex = new Regex("mechanik", RegexOptions.IgnoreCase | RegexOptions.Compiled);
             Regex robotRegex = CreateRobotRegex();
+
+            int automatik = 0;
+            int mechanik = 0;
 
             foreach (string phrase in a)
             {
@@ -42,7 +42,7 @@ namespace Codewars.WeAreTheRobots
             // the robot has this shape: {leg}{body}{eye}{body}{eye}{body}{leg}
             // eye: it is a "0"
             // body: it is composed by 2 occurence of one of these: |};&#[]/><()*
-            // leg: it can be one of this: abcdefghijklmnopqrstuvwxyz
+            // leg: it can be one of these: abcdefghijklmnopqrstuvwxyz
             string leg = @"[\w]";
             string body = @"[^\w\s]{2}";
             return new Regex($"{leg}{body}0{body}0{body}{leg}", RegexOptions.Compiled);
