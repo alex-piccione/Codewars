@@ -17,28 +17,13 @@ namespace Codewars.Factorial
     [TestFixture, Category("Kata 004: Factorial")]
     public class FactorialTests
     {
-        [Test]
-        public void FactorialOf0ShouldBe1()
+        [TestCase(0, ExpectedResult = 1)]
+        [TestCase(1, ExpectedResult = 1)]
+        [TestCase(2, ExpectedResult = 2)]
+        [TestCase(3, ExpectedResult = 6)]
+        public int FactorialShouldReturnTheRightValue(int number)
         {
-            Assert.AreEqual(1, Kata.Factorial(0));
-        }
-
-        [Test]
-        public void FactorialOf1ShouldBe1()
-        {
-            Assert.AreEqual(1, Kata.Factorial(1));
-        }
-
-        [Test]
-        public void FactorialOf2ShouldBe2()
-        {
-            Assert.AreEqual(2, Kata.Factorial(2));
-        }
-
-        [Test]
-        public void FactorialOf3ShouldBe6()
-        {
-            Assert.AreEqual(6, Kata.Factorial(3));
+            return Kata.Factorial(number);
         }
 
         [Test]
@@ -46,8 +31,7 @@ namespace Codewars.Factorial
         {
             Assert.Throws<ArgumentOutOfRangeException>( () => Kata.Factorial(-1));
         }
-
-		
+        
         [Test]
         public void FactorialOfNumberAbove12ShouldRaiseAnException()
         {
