@@ -13,8 +13,7 @@ namespace CodeWars
     public static class Kata_2
     {
         public static string Disemvowel(string str) =>
-            Regex.Replace(str, "[aeiou]", "", RegexOptions.IgnoreCase | RegexOptions.Multiline);
-        
+            Regex.Replace(str, "[aeiou]", "", RegexOptions.IgnoreCase | RegexOptions.Multiline);        
     }
 
     [TestFixture]

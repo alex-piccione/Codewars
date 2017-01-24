@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using System.Text.RegularExpressions;
+using System.Collections;
 
 namespace CodeWars
 {
@@ -12,25 +13,37 @@ namespace CodeWars
     {
         public static string Decode(string morseCode)
         {
-            string[] morseWords = Regex.Split(morseCode, "   ");
             StringBuilder finalText = new StringBuilder();
+            string[] morseWords = Regex.Split(morseCode, "   ");            
+            
             foreach (var morseWord in morseWords)
             {
+                if (finalText.Length > 0)
+                    finalText.Append(' ');
                 string[] morseLetters = morseWord.Split(' ');
-                if(finalText.Length == 0)
-                    finalText.Append(morseCode.Get())
+                foreach(var morseLetter in morseLetters)               
+                    finalText.Append(MorseCode.Get(morseLetter));
             }
-            return string.Join(" ", words);
-            
-
-            //MorseCode.Get()
+            return finalText.ToString();
         }
     }
 
 
     class MorseCode
     {
-        static string Get(string a) { return "a"; }
+        private static Dictionary<string, char> morseCode = new Dictionary<string, char>()
+        {
+            { "....", 'H'},
+            { ".", 'E'},
+            { "-.--", 'Y'},
+            { ".---", 'J'},
+            { "..-", 'U'},
+            { "-..", 'D'}
+        };
+
+        public static char Get(string morse) {
+            return morseCode[morse];
+        }       
     }
 
 
@@ -38,7 +51,7 @@ namespace CodeWars
     public class MorseCodeDecoderTests
     {
         [Test]
-        public void MorseCodeDecoderBasicTest_1()
+        public void MorseCodeDecoderTest()
         {
             try
             {

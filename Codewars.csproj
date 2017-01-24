@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Find small int.cs" />
+    <Compile Include="001.Find small int.cs" />
+    <Compile Include="002.Disemvowel.cs" />
+    <Compile Include="003.Morse Code Decoder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
