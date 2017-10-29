@@ -1,15 +1,15 @@
 # Codewars
 My Kata practicing on Codewars.
 
-## C#
+- C#
 
 
 
-## Python
+- Python
 
 
 
-## JavaScript
+- [JavaScript](./JavaScript)
 
 
 
