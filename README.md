@@ -9,7 +9,7 @@ My Kata practicing on Codewars.
 
 
 
-- [JavaScript](./Javascript)
+- [JavaScript](./JavaScript)
 
 
 
