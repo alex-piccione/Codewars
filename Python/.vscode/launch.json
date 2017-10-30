@@ -8,7 +8,7 @@
             "name": "Python",
             "type": "python",
             "request": "launch",
-            "stopOnEntry": true,
+            "stopOnEntry": false,
             "pythonPath": "${config:python.pythonPath}",
             // program to run
             "program": "${workspaceRoot}/Kyu 8/Calculate Price Excluding VAT.py",
