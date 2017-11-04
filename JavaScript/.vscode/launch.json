@@ -8,9 +8,8 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            //"program": "${workspaceRoot}/app.js",
             //"_program": "${workspaceRoot}/count_9_brute.js",
-            "program": "${workspaceRoot}/kyu 5/count_9_elegant.js",                   
+            "program": "${workspaceRoot}/kyu 5/Count 9.js",                   
             "cwd": "${workspaceRoot}"
         },
         {

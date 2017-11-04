@@ -13,4 +13,4 @@
 
 
 ## Kyu 5
-- [count '9's from 1 to n](Kyu+5/count_9.md)
+- [count '9's from 1 to n](Kyu+5/Count 9.md)
