@@ -24,18 +24,18 @@ number9(100) //should return 20
 ## Solution explained
 
 trying to reduce the problem to small parts I consider that for every number composed by N digits
-at least all the possibilities for a number with less one number of digits should be counted
-Here it is, for NNN for sure we have to pass through all the number from 0 to NN
+at least all the possibilities for a number with less one number of digits should be counted  
+Here it is, for NNN for sure we have to pass through all the number from 0 to NN  
 If XNN is composed by zeros apart from the first digit
-we can say that for XNN we have for sure pass X times through NN
+we can say that for XNN we have for sure pass X times through NN  
 For 400 we passed 4 times through the numbers between 0 and 99, only the first digit changed but the occurrences of "9" was the same
-for every repetition (from 00 to 99, then from 100 to 199 and so on)
-
-for number composed only by zeros
-about 10, 100, 1000 and their multiplies like 200, 400, 5000
-there is a simple rules that we can call "zeros formula"
-multiply the power of 10 elevated for the number of digits before the first one diminuited by one for the number of digits before the first one.
-
+for every repetition (from 00 to 99, then from 100 to 199 and so on)  
+  
+for number composed only by zeros  
+about 10, 100, 1000 and their multiplies like 200, 400, 5000  
+there is a simple rules that we can call "zeros formula"  
+multiply the power of 10 elevated for the number of digits before the first one diminuited by one for the number of digits before the first one.  
+  
 multiply the result for the number represented by the fisrt digit and add one in case it is 9
 Examples:  
 100 will be 1 * 2 * 10^1  
