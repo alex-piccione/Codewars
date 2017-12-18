@@ -50,15 +50,15 @@ for example 10450 contains the occurrenced in 10000 plus the occurrences of 400 
 the explanation is that we have explored all the combination of a bigger part and then we have extranumbers to explore
 In case of 123 we have explored all the possibilities untile the 100, then we have to consider the remaining numbers from 101 to 123
 that means that we can use 20 with the formula that just consider the zeros
-so we have the occurrences for 20 (from 101 to 120) and then remain the 3
-
+so we have the occurrences for 20 (from 101 to 120) and then remain the 3  
+  
 There is an exception when the number contain one or more 9 in the greater parts of the one we are considering
 for example in 923 after the sum of occurrences for 900, when we calculate the occurrences for the 20 we have to consider 
-that for every number we have an extra 9 (actually it is for nember from 901 to 920)
+that for every number we have an extra 9 (actually it is for nember from 901 to 920)  
 so we have to add also an extra counter for the 23 occurrences after the 900 where a "9" should be counted
 add the number that we have using only the right part of the full number after the digit we are considering
-adding an extra one permits to remove the "+1" rule from the generic "zeros formula" in case of first digit like "9"
-
+adding an extra one permits to remove the "+1" rule from the generic "zeros formula" in case of first digit like "9"  
+  
 923 is 9 * 2 * 10^1 for the "900" part + 1 plus 2 * 2 * (10^1 + 1) for "20" part and 3 * 0 * 1 for the "3" part
 the "20" part changed from the basic 2 * 2 * 10^1 because we have to consider the "9" from 900 that is present on every iteration
 
