@@ -1,2 +1,4 @@
 C#/packages/
 **/__pycache__/
+*/.vs
+C#/obj
