@@ -37,9 +37,9 @@ there is a simple rules that we can call "zeros formula"
 multiply the power of 10 elevated for the number of digits before the first one diminuited by one for the number of digits before the first one.
 
 multiply the result for the number represented by the fisrt digit and add one in case it is 9
-Examples: 
-100 will be 1 * 2 * 10^1
-300 will be 3 * 2 * 10^1
+Examples:  
+100 will be 1 * 2 * 10^1  
+300 will be 3 * 2 * 10^1  
 900 will be 9 * 2 * 10^1 + 1
 
 using this basic rule we can calculate the total occurrences for numbers that are not composed only by zeros
