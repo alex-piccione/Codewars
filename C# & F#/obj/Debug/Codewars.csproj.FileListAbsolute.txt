@@ -1,0 +1,13 @@
+D:\Programming\Codewars\C#\bin\Debug\Codewars.dll
+D:\Programming\Codewars\C#\bin\Debug\Codewars.pdb
+D:\Programming\Codewars\C#\bin\Debug\nunit.framework.dll
+D:\Programming\Codewars\C#\bin\Debug\nunit.framework.pdb
+D:\Programming\Codewars\C#\bin\Debug\nunit.framework.xml
+D:\Programming\Codewars\C#\obj\Debug\Codewars.csproj.CoreCompileInputs.cache
+D:\Programming\Codewars\C#\obj\Debug\Codewars.csproj.CopyComplete
+D:\Programming\Codewars\C#\obj\Debug\Codewars.dll
+D:\Programming\Codewars\C#\obj\Debug\Codewars.pdb
+D:\Programming\Codewars\C#\bin\Debug\NUnit3.TestAdapter.dll
+D:\Programming\Codewars\C#\bin\Debug\NUnit3.TestAdapter.pdb
+D:\Programming\Codewars\C#\bin\Debug\nunit.engine.dll
+D:\Programming\Codewars\C#\bin\Debug\nunit.engine.api.dll
