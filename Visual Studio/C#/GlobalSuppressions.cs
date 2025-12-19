@@ -5,4 +5,4 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Design", "CA1050:Declare types in namespaces", Justification = "<Pending>", Scope = "type", Target = "~T:Tests")]
+[assembly: SuppressMessage("Design", "CA1050:Declare types in namespaces", Justification = "Not relevant")]
