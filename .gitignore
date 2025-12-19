@@ -1,7 +1,5 @@
-C#/packages/
 **/__pycache__/
-*/.vs
-C#/obj
+**/.vs
 
 
 # C# compile folders
@@ -13,5 +11,3 @@ C#/obj
 # VS test run results
 **/TestResults
 
-# VS 
-**/obj/
