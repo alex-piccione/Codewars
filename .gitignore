@@ -2,3 +2,16 @@ C#/packages/
 **/__pycache__/
 */.vs
 C#/obj
+
+
+# C# compile folders
+**/bin/Debug
+**/obj/Debug
+**/bin/Release
+**/obj/Release
+
+# VS test run results
+**/TestResults
+
+# VS 
+**/obj/

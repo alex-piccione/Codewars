@@ -41,7 +41,7 @@ function _get9(n){
 //return number9(929)
 //return number9(10000000000)
 
-for (let number of [1, 9, 800, 900, 123, 923, 993, 929, 565754, 10000000000])
+for (let number of [1, 9, 500, 800, 900, 123, 923, 993, 929, 1959, 565754, 10000000000])
     console.log(`for ${number} expected is ${count9(number)}, result is ${number9(number)}`)
 
 // why 10000000000 value is not printed out ?!
