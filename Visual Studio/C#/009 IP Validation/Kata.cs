@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using System.Linq;
 
-namespace Solution
+namespace _009_IP_Validation
 {
     class Kata
     {
