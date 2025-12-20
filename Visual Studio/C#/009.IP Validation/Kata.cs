@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using NUnit.Framework;
+using System.Linq;
 
 namespace Solution
 {
@@ -16,11 +17,7 @@ namespace Solution
                     && number.ToString().Length == x.Length);
         }
     }
-}
 
-namespace Solution
-{
-    using NUnit.Framework;
 
     [TestFixture]
     public class SolutionTest
