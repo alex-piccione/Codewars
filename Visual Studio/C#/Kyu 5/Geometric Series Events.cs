@@ -3,23 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
-using System.Runtime.CompilerServices;
-using System.Text;
 
 namespace Kyu_5_Geometric_Series_Events
 {
-    //enum Day { Mo = 0, Tu = 1, We = 2, Th = 3, Fr = 4, Sa = 5, Su = 6 }
-
-
-    //internal readonly struct Patterna
-    //{
-    //    public int R { get; init; }
-    //    public int[] Sequence { get; init; }
-    //}
-
-    //internal record Pattern(int R, int[] Sequence);
-
-
     public static class Extensions
     {
         public static int ToIndex(this String day) => day switch
@@ -33,34 +19,12 @@ namespace Kyu_5_Geometric_Series_Events
             "Su" => 6,
             _ => throw new ArgumentException("Invalid day string"),
         };
-
-        public static string ToDay(this int index) => (index % 7) switch
-        {
-            0 => "Mo",
-            1 => "Tu",
-            2 => "We",
-            3 => "Th",
-            4 => "Fr",
-            5 => "Sa",
-            6 => "Su",
-            _ => throw new ArgumentException("Invalid day index"),
-        };
     }
 
     public static class GeometricSeriesOfEvents
     {
         // There can be only 7 possible patterns for the r values mod 7.
         // Pre-calculating it allows to quick identify the cycle and avoid some computations.
-
-        //private static readonly Dictionary<int, int[]> patterns = new() {
-        //    { 1, new[] {1, 2, 3, 4, 5, 6, 7} },
-        //    { 2, new[] {1, 3, 7} },
-        //    { 3, new[] {1, 4, 6} },
-        //    { 4, new[] {1, 5, 7} },
-        //    { 5, new[] {1, 6, 3, 2, 4, 7} },
-        //    { 6, new[] {1, 7} },
-        //    { 7, new[] {1 } },
-        //};
 
         // key:r, value: 0-index pattern
         private static readonly Dictionary<int, int[]> patterns = new() {
@@ -78,7 +42,7 @@ namespace Kyu_5_Geometric_Series_Events
             Console.WriteLine($"Start: {startDay}, r={r}, n={n}, Target: {targetDay}");
             var pattern = patterns[r % 7];
 
-            // normalize the days to star form 0
+            // normalize the days to start form 0
             var startIndex = startDay.ToIndex();
             var targetIndex = targetDay.ToIndex();
             if (targetIndex < startIndex)
@@ -86,6 +50,7 @@ namespace Kyu_5_Geometric_Series_Events
             targetIndex = targetIndex - startIndex;
             startIndex = 0;
 
+            // cehck if start matches with target
             if (startIndex == targetIndex && n == 1)
                 return 1;
 
@@ -98,54 +63,6 @@ namespace Kyu_5_Geometric_Series_Events
             var remainingEvents = pattern.TakeWhile(x => x != targetIndex).Count();
 
             return eventsBeforeLastCycle + remainingEvents + 1; // add initial event
-
-            /*
-            if (n == 1)
-                return pattern.Count(x => x != targetIndex) + 1;
-
-
-
-
-            var nextEvent = startDay.ToIndex();
-            var prevEvent = nextEvent;
-
-            var eventsCount = 1;
-            var matchingDaysCount = startDay == targetDay ? 1 : 0;
-
-            if (n == 1 && matchingDaysCount == 1) return 1;
-
-            for(int i=1; i<Double.MaxValue; i++) 
-            //while (n > matchingDays)
-            {
-                prevEvent = nextEvent; // temp
-                eventsCount++;
-
-                BigInteger days = BigInteger.Pow(r, i); // (long)Math.Pow(r, i);
-
-                //if (days >= long.MaxValue) return -1;
-                
-
-                // increase r exponentially and get the steps for the next event
-                nextEvent += (int)(days % 7);
-
-                //string a = nextEvent.ToDay(); 
-
-
-                if (nextEvent.ToDay() == targetDay)
-                {
-                    matchingDaysCount++;
-
-                    if (n == matchingDaysCount)
-                    {
-                        //Console.WriteLine($"Found {n} occurrence(s) of {targetDay} at event {eventsCount}");
-                        Console.WriteLine($"Event {eventsCount}: {prevEvent.ToDay()} + {days} = {nextEvent.ToDay()} (Index {nextEvent % 7} because r={i})");
-                        return eventsCount;
-                    }
-                }
-            }
-
-            return -1;
-            */
         }
     }
 
