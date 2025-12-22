@@ -1,0 +1,32 @@
+﻿# Geometric Series Events
+
+https://www.codewars.com/kata/68379963cbaf46ff456c2899/csharp
+
+Description:
+A infinite sequence of events has the property that the number of days between successive events 
+follows a geometric series with constant r, a positive integer. 
+For example, if r = 2, this means that event 2 occurs 2 days after event 1, event 3 happens 4 days after event 2, 
+event 4 follows 8 days after event 3, and so on. You know the day of the week of the first event, called start_day. 
+Given any day in the week, called target_day, and a positive integer n, 
+predict the number of the event in the sequence when the n'th occurrence of target_day occurs. 
+Weekdays are indicated using "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su".
+
+Example 1: find_nth_occurrence(start_day = "Mo", r = 2, n = 1, target_day = "Su") should return 3. 
+Explanation: Which event is the first occurring on a Sunday? 
+Since r = 2, and event 1 is on a Monday, we know that event 2, which occurs 2 days later, is on a Wednesday. 
+So event 3, 4 days after event 2, is the first event on a Sunday.
+
+Example 2: find_nth_occurrence("We", 3, 2, "We") should return 7, since we can find the second Wednesday as follows:
+
+1,We 
+-> 2,We+3 (since r=3) -> 2,Sa
+-> 3,Sa+9 -> 3,Mo 
+-> 4,Mo+27 -> 4,Su
+-> 5,Su+81 -> 5,Th 
+-> 6,Th+243 -> 6,Tu
+-> 7,Tu+729 -> 7,We.
+If fewer than n occurrences of target_day occur in the entire sequence, return -1.
+
+Constraints: 1 ≤ r ≤ 106, 1 ≤ n ≤ 10100.
+
+This kata was motivated by https://www.codewars.com/kata/59891e177f0876b0820000c4.
