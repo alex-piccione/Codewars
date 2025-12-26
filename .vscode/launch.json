@@ -5,11 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Run Tests of current file (JS/TS)",
             "type": "node",
             "request": "launch",
+            "runtimeArgs": ["mocha", "${file}"],
+            "runtimeExecutable": "npx",
+            "skipFiles": ["<node_internals>/**"]            
+        },
+        {
             "name": "Launch Program",
-            "program__": "${workspaceFolder}/JavaScript\\Kyu 4\\Lowest base system.js",
-            "program": "${workspaceFolder}/JavaScript\\Kyu 5\\Count 9.js"
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/JavaScript\\Kyu 5\\Pete the baker.js"
         }
     ]
 }

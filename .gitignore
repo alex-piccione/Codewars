@@ -11,3 +11,4 @@
 # VS test run results
 **/TestResults
 
+node_modules/

@@ -2,16 +2,8 @@
 
 My Kata practicing on Codewars.
 
-- C#
-
-
+- [C# & F#](C#+&&amp;F#)
 
 - [Python](Python)
 
-
-
 - [JavaScript](./JavaScript)
-
-
-
-
