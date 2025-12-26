@@ -16,6 +16,7 @@ To run the tests of a Kata in VS Code, you can use the command "Run Test of curr
 ## Kyu 5
 - [count '9's from 1 to n](Kyu+5/Count 9.md)
 - [Pete, the baker](Kyu+5/Pete the baker.md)
+- [Rotate an array matrix](Kyu+5/Rotate+an+array+matrix.md)
 
 ## Kyu 4
 - [Lowest base system](Kyu+4/Lowest+base+system.md)
