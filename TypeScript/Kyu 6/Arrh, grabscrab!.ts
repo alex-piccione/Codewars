@@ -1,27 +1,7 @@
 export function grabscrab(anagram: string, dictionary: string[]): string[] {
-
-  const createCharMap = (word:string) => {
-    const charMap = new Map<string, number>()
-    for (const char of word) {
-        const currentCount = charMap.get(char) ?? 0
-        charMap.set(char, currentCount + 1)
-    }
-    return charMap
-  }
-
-  let mapsAreEqual = (mapA:Map<string, number>, mapB:Map<string, number>) => {
-    if (mapA.size !== mapB.size) return false
-    
-    for (const char of mapA.keys())
-        if (mapA.get(char) !== mapB.get(char))
-            return false
-        
-    return true
-  }    
-
-  const mapOfAnagram = createCharMap(anagram)
-
-  return dictionary.filter((word) => mapsAreEqual(mapOfAnagram, createCharMap(word)))
+  const createList = (word:string) => [...word].sort().join("")
+  const anagramList = createList(anagram)
+  return dictionary.filter((word) => anagramList === createList(word))
 }
 
 
