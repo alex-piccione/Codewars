@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "🟨 JavaScript (current)",
+            "type": "shell",
+            "command": "node",
+            "args": ["${file}"]
+        },
+        {
+            "label": "🟦 TypeScript (current)",
+            "type": "shell",
+            "command": "ts-node",
+            "args": ["${file}"]
+        },
+        {
+            "label": "🐍 Python (current)",
+            "type": "shell",
+            "command": "python3",
+            "args": ["${file}"]
+        },
+        {
+            "label": "🦀 Rust (current)",
+            "type": "shell",
+            "command": "cargo",
+            "args": ["run ${file}"]
+        },
+        /*{
+            "label": "🔵 GO (current)",
+            "type": "shell",
+            "command": "go",
+            "args": ["run", "${file}"]
+        },*/
+        {
+            "label": "🔵 GO (test)",
+            "type": "shell",
+            "command": "ginkgo",
+            "args": ["${fileDirname}"],
+            "group": "test"
+        },
+        {
+            "label": "🔵 GO (preapre test)",
+            "type": "shell",
+            "command": "ginkgo",
+            "args": ["bootstrap"],
+            "group": "test"
+        },
+
+    ]
+    /*
+    🟨 JavaScript
+    🟦 Typescript
+    🐍 Python
+    ☕ Java
+    */
+}
