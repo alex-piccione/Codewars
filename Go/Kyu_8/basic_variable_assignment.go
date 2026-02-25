@@ -1,7 +1,7 @@
 package kata
 
 func Namevar() string {
-	a := "codeaaa"
+	a := "code"
 	b := "wa.rs"
 	name := a + b
 	return name
