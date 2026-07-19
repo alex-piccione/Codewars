@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "bDv/ir85C9E=",
+  "success": true,
+  "projectFilePath": "D:\\Programming\\Kata, Exercise, Practicing\\Codewars\\C# & F#\\F#\\F#.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alex\\.nuget\\packages\\fsharp.core\\5.0.2\\fsharp.core.5.0.2.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\fsunit\\7.1.1\\fsunit.7.1.1.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.applicationinsights\\2.23.0\\microsoft.applicationinsights.2.23.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.2\\microsoft.extensions.dependencymodel.8.0.2.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.testing.extensions.telemetry\\2.1.0\\microsoft.testing.extensions.telemetry.2.1.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.testing.extensions.trxreport.abstractions\\2.1.0\\microsoft.testing.extensions.trxreport.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.testing.extensions.vstestbridge\\2.1.0\\microsoft.testing.extensions.vstestbridge.2.1.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.testing.platform\\2.1.0\\microsoft.testing.platform.2.1.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.testing.platform.msbuild\\2.1.0\\microsoft.testing.platform.msbuild.2.1.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.testplatform.objectmodel\\18.0.1\\microsoft.testplatform.objectmodel.18.0.1.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\nunit\\4.6.1\\nunit.4.6.1.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\nunit3testadapter\\6.2.0\\nunit3testadapter.6.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
