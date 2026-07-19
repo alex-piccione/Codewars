@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 
-namespace Kyu_7
+namespace Kyu_7.Complementary_DNA
 {
     public class DnaStrand
     {
@@ -10,20 +10,21 @@ namespace Kyu_7
             // StringBuilder allocates internally a char[] anyway, and does a bound check at any append.
             // We can avoid that work since we know the length in advance
 
-            var chars = new char[dna.Length];
+            var dna_complementary = new char[dna.Length];
 
-            var dnaSpan = dna.AsSpan();
+            //var dnaSpan = dna.AsSpan();  // C# 13 (?)
+            var dnaSpan = dna.ToCharArray();
             for (var i = 0; i < dna.Length; i++)
-                chars[i] = dnaSpan[i] switch
+                dna_complementary[i] = dnaSpan[i] switch
                 {
                     'A' => 'T',
                     'T' => 'A',
                     'C' => 'G',
                     'G' => 'C',
-                    _ => throw new Exception($"DNA cannot have 'dnaSpan[i]' (found at position {i}).")
+                    _ => throw new Exception($"DNA cannot have '{dnaSpan[i]}' (found at position {i}).")
                 };
 
-            return new string(chars);
+            return new string(dna_complementary);
         }
     }
 
