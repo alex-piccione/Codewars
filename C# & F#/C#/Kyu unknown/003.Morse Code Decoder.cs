@@ -7,14 +7,14 @@ using NUnit.Framework;
 using System.Text.RegularExpressions;
 using System.Collections;
 
-namespace CodeWars
+namespace Kyu_N
 {
     class MorseCodeDecoder
     {
         public static string Decode(string morseCode)
         {
             StringBuilder finalText = new StringBuilder();
-            string[] morseWords = Regex.Split(morseCode, "   ");            
+            string[] morseWords = Regex.Split(morseCode, "   ");
             
             foreach (var morseWord in morseWords)
             {

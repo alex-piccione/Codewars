@@ -1,8 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 
-
-namespace Kyu5_Mean_Square_Error
+namespace Kyu_5.Mean_Square_Error
 {
     public class Kata
     {

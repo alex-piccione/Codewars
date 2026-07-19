@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace Codewars.FindTheNextPErfectSquare
+namespace Kyu_N.FindTheNextPErfectSquare
 {
     public class Kata
     {

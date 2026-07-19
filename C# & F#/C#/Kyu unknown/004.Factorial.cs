@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace Codewars.Factorial
+namespace Kyu_N.Factorial
 {
     public static class Kata
     {

@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace _008_Sum_of_Digits___Digital_Root
+namespace Kyu_6.Sum_of_Digits___Digital_Root
 {
     public class Number
     {

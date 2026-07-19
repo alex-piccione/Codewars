@@ -2,12 +2,12 @@
 using NUnit.Framework;
 using System.Text.RegularExpressions;
 
-namespace Codewars.WeAreTheRobots
+namespace Kyu_N.WeAreTheRobots
 {
     public class Kata
     {
         public static String[] CountRobots(String[] a)
-        {                       
+        {
             Regex automatikRegex = new Regex("automatik", RegexOptions.IgnoreCase | RegexOptions.Compiled);
             Regex mechanikRegex = new Regex("mechanik", RegexOptions.IgnoreCase | RegexOptions.Compiled);
             Regex robotRegex = CreateRobotRegex();
@@ -21,14 +21,14 @@ namespace Codewars.WeAreTheRobots
                 bool isMechanik = !isAutomatik && mechanikRegex.IsMatch(phrase);
 
                 if (isAutomatik || isMechanik)
-                {               
+                {
                     int robots = robotRegex.Matches(phrase).Count;
 
                     if (isAutomatik)
                         automatik += robots;
                     else
                         mechanik += robots;
-                }               
+                }
             }
 
             return new string[] {
@@ -59,6 +59,7 @@ namespace Codewars.WeAreTheRobots
             String[] expected = { "0 robots functioning automatik", "0 robots dancing mechanik" };
             Assert.AreEqual(expected, Kata.CountRobots(a));
         }
+
         [Test]
         public void BasicTest2()
         {
@@ -66,6 +67,7 @@ namespace Codewars.WeAreTheRobots
             String[] expected = { "0 robots functioning automatik", "0 robots dancing mechanik" };
             Assert.AreEqual(expected, Kata.CountRobots(a));
         }
+
         [Test]
         public void BasicTest3()
         {
@@ -73,6 +75,7 @@ namespace Codewars.WeAreTheRobots
             String[] expected = { "1 robots functioning automatik", "2 robots dancing mechanik" };
             Assert.AreEqual(expected, Kata.CountRobots(a));
         }
+
         [Test]
         public void BasicTest4()
         {
@@ -88,6 +91,7 @@ namespace Codewars.WeAreTheRobots
             String[] expected = { "2 robots functioning automatik", "3 robots dancing mechanik" };
             Assert.AreEqual(expected, Kata.CountRobots(a));
         }
+
         [Test]
         public void BasicTest6()
         {
@@ -95,6 +99,7 @@ namespace Codewars.WeAreTheRobots
             String[] expected = { "3 robots functioning automatik", "3 robots dancing mechanik" };
             Assert.AreEqual(expected, Kata.CountRobots(a));
         }
+
         [Test]
         public void BasicTest7()
         {
@@ -102,6 +107,7 @@ namespace Codewars.WeAreTheRobots
             String[] expected = { "3 robots functioning automatik", "0 robots dancing mechanik" };
             Assert.AreEqual(expected, Kata.CountRobots(a));
         }
+
         [Test]
         public void BasicTest8()
         {
@@ -113,10 +119,10 @@ namespace Codewars.WeAreTheRobots
                        "We are the robots","d*(0)(0)}b We're functioning automatik D[(0)(0)]b",
                        "And we are d[(0)(0}]b dancing mechanik Roboter0%1 d[(0)(0)]b c[(0)(0)]b"};
 
-
             String[] expected = { "2 robots functioning automatik", "3 robots dancing mechanik" };
             Assert.AreEqual(expected, Kata.CountRobots(a));
         }
+
         [Test]
         public void BasicTest9()
         {

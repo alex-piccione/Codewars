@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using System.Linq;
 
-namespace Codewars.Kyu_5
+namespace Kyu_5
 {
     public class CountIPAddresses
     {

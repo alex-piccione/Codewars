@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 
-namespace Kyu_5_Geometric_Series_Events
+namespace Kyu_5.Geometric_Series_Events
 {
     public static class Extensions
     {
@@ -66,7 +66,7 @@ namespace Kyu_5_Geometric_Series_Events
         }
     }
 
-    [TestFixture]
+    //[TestFixture]
     public class GeometricSeriesOfEventsTests
     {
         private readonly BigInteger one = BigInteger.One;

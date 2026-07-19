@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace _007_Create_Phone_Number
+namespace Kyu_6.Create_Phone_Number
 {
 
     public class Kata

@@ -1,4 +1,4 @@
-﻿namespace CodeWars
+﻿namespace Kyu_N
 {
     using NUnit.Framework;
     using System.Text.RegularExpressions;

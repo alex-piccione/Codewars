@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using System.Linq;
 
-namespace CodeWars
+namespace Kyu_N
 {
     public class Kata
     {

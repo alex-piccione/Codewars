@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 
-namespace _010_Find_The_Parity_Outlier
+namespace Kyu_6.Find_The_Parity_Outlier
 {
     public class Kata
     {
