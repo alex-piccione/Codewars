@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using System;
 
 
 namespace Kyu5_Mean_Square_Error
@@ -17,10 +14,19 @@ namespace Kyu5_Mean_Square_Error
         /// <returns>The mean square error as a double.</returns>
         public static double Solution(int[] firstArray, int[] secondArray)
         {
-            // TODO
-            return 0;
+            var errorAccumulator = 0d;
+            for (var i=0;  i<firstArray.Length; i++)
+            {
+                var error = Math.Abs(secondArray[i] - firstArray[i]);
+                errorAccumulator += error * error;
+            }
+
+            return errorAccumulator / firstArray.Length;
         }
     }
+
+    // Note 1: could have been solved using .Select() .Average()   or .Zip()...Average()
+    // Note 2: x*x  is more performant than Pow(x, 2)
 
 
 
